@@ -3,6 +3,7 @@
 import { useLanguage } from "@/contexts/language-context"
 import { format } from "date-fns"
 import { Clock, Calendar } from "lucide-react"
+import { ModeToggle } from "@/components/mode-toggle"
 
 export function Header() {
   const { t } = useLanguage()
@@ -31,6 +32,7 @@ export function Header() {
           <span className="hidden md:inline">{format(today, "EEEE, dd MMM, yyyy")}</span>
           <span className="md:hidden">{format(today, "dd/MM/yy")}</span>
         </div>
+        <ModeToggle />
       </div>
     </header>
   )
